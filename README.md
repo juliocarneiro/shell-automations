@@ -1,4 +1,4 @@
-# shellscript-automations
+# ambient-tools-install.sh
 
 sudo chmod +x ambient-tools-install.sh
 
