@@ -7,16 +7,16 @@ if [ -e "$GO" ]; then
     echo "----------------------------------------------"
     echo "O arquivo $GO ja existe existe, instalando..."
     echo "----------------------------------------------"
-    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+    rm -rf /usr/local/go && tar -C /usr/local -xzf $GO
     echo 'export PATH=$PATH:/usr/local/go/bin' >>$bashRC
     echo "Go instalado com sucesso!"
 else
     echo "----------------------------------------------"
     echo "Baixando Go..."
-    wget https://go.dev/dl/go1.17.5.linux-amd64.tar.gz
+    wget https://go.dev/dl/$GO
     echo "----------------------------------------------"
     echo "Instalando Go..."
-    rm -rf /usr/local/go && tar -C /usr/local -xzf go1.17.5.linux-amd64.tar.gz
+    rm -rf /usr/local/go && tar -C /usr/local -xzf $GO
     echo 'export PATH=$PATH:/usr/local/go/bin' >>$bashRC
     echo "----------------------------------------------"
     echo "Go instalado com sucesso!"
